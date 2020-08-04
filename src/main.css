@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background: hsl(230, 17%, 14%);
+}
+
+.dashboard{
+  display: grid;
+  row-gap: 1rem;
+  margin: 0 1rem 0 1rem;
+}
+
+.header{
+  margin: 1rem 0 0.25rem 0;
+  color: white;
+}
+
+.sub-header{
+  margin: 0 0 1rem 0;
+  color: rgba(255, 255, 255, 0.527);
+}
+
+hr{
+  margin: 0;
+}
+
+.darkmode{
+ display: grid;
+ grid-template-columns: 1fr auto;
+}
+
+.darkmode p{
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.527);
+  margin: 0.25rem 0 0 0;
+  font-weight: bold;
+}
+
+div{
+  color: white;
+}
+
+/* switch button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  display:none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsl(290, 85%, 55%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: hsl(230, 17%, 14%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(230, 22%, 74%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: white;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
