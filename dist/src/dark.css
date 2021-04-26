@@ -49,6 +49,7 @@ body{
   margin: 1rem 0 0.25rem 0;
   color: var(--main-header);
   white-space: nowrap;
+  font-size: 1.2rem;
 }
 
 .sub-header{
@@ -56,13 +57,12 @@ body{
   color: var(--sub-header);
 }
 
-hr{
-  margin: 0;
-}
-
 .darkmode{
- display: grid;
- grid-template-columns: 1fr auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center; 
+  color: var(--sub-header);
+
 }
 
 .darkmode p{
@@ -111,7 +111,8 @@ hr{
   grid-area: icon;
   display: grid;
   grid-template-columns: auto auto;
-  justify-content: center; 
+  justify-content: center;
+  align-items: center; 
 }
 
 .dashboard-account__icon a{
@@ -130,17 +131,17 @@ hr{
   grid-template-columns: auto auto;
   justify-content: center;
   margin: 0 0 1rem 0; 
+  align-items: center;
 }
 
 .dashboard-account__diff p{
-  margin: 0;
+  margin: 0.5rem 0;
   color: hsl(163, 72%, 41%);
   font-size: 0.8rem;
   font-weight: bold;
 }
 
 .dashboard-account__diff a{
-  padding: 0.3rem 0 0 0;
   margin: 0 0.2rem 0 0;
 }
 
@@ -151,14 +152,12 @@ hr{
 .amount{
   color: var(--followers-amount);
   font-size: 3rem;
-  margin: 0;
   font-weight: bold;
 }
 
 .followers{
   color: var(--word-followers);
-  margin: 0;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
 }
 
 .dashboard-overview h4{
@@ -176,21 +175,19 @@ hr{
   grid-template-areas: "heading . icon"
                        "number . percent";
   justify-content: left;
-  padding: 0 0 0 2rem;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
 }
 
 .overview-card__Heading{
   grid-area: heading;
   white-space: nowrap;
-  font-size: 0.875rem;
-  margin: 1rem 0 0 0;
   color: var(--word-followers);
   font-weight: bold;
 }
 
 .dashboard-overview__list a{
   grid-area: icon;
-  padding: 1rem 0 0 2rem;
 }
 
 .overview-card__number{
@@ -206,8 +203,8 @@ hr{
   display: grid;
   grid-template-columns: auto auto;
   grid-template-areas: "arrow per";
-  justify-content: left;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .overview-card__percent a{
@@ -311,37 +308,29 @@ input:checked + .slider:before {
 }
 
 /* media queries - tablet version */
-@media (min-width: 376px){
+@media (min-width: 640px){
   body{
     overflow-x: hidden
   }
   hr{
     display: none;
   }
-}
 
-@media (min-width: 376px){
   .dashboard{
     grid-template-columns: 1fr 1fr;
     column-gap: 1.5rem;
     margin: 2rem 5rem 2rem 5rem;
   }
-}
 
-@media (min-width: 376px){
   .header{
     white-space: nowrap;
   }
-}
 
-@media (min-width: 376px){
   .dashboard-overview{
     grid-column-start: 1;
     grid-column-end: span 2;
   }
-}
 
-@media (min-width: 376px){
   .darkmode{
     grid-template-columns: auto auto;
     justify-content: right;
@@ -350,38 +339,28 @@ input:checked + .slider:before {
   }
 }
 
-
 /* media queries - desktop version */
 @media (min-width: 1050px){
   body{
     max-width: 1440px;
   }
-}
 
-@media (min-width: 1050px){
   .dashboard{
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}
 
-@media (min-width: 1050px){
   .darkmode{
     grid-column-start: 3;
     grid-column-end: span 2;
   }
-}
 
-@media (min-width: 1050px){
   .dashboard-header{ 
     grid-column-start: 1;
     grid-column-end: span 2;
   }
-}
 
-@media (min-width: 1050px){
   .dashboard-overview{
     grid-column-start: 1;
     grid-column-end: span 4;
   }
 }
-
